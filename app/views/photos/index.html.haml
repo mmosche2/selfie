@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    %meta{:content => "IE=8", "http-equiv" => "X-UA-Compatible"}/
+    %title= content_for?(:title) ? yield(:title) + " | Selfie" : "Selfie"
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"}
+    = favicon_link_tag 'favicon.ico', :type => 'image/ico'
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = yield(:head)
+
+  %body
+    %nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        = link_to 'Home', root_path
+        .pull-right
+          - if user_signed_in?
+            %p Signed in as <%= current_user.email %>. Not you?
+            = link_to "Sign out", destroy_user_session_path
+          - else
+            = link_to "Sign up", new_user_registration_path
+            %span or
+            = link_to "Sign in", new_user_session_path
+    .container
+      .row
+        .col-md-4.col-md-offset-4
+          %p Hello World
