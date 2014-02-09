@@ -10,7 +10,8 @@ $(document).ready ->
     $("#webcam").scriptcam({
       width: 460,
       height: 320,
-      cornerColor:'eeeeee'
+      cornerColor:'eeeeee',
+      useMicrophone: false
     })
     $('#webcam-button').text("Remember This Moment!")
 
@@ -20,6 +21,7 @@ $(document).ready ->
     $('#webcam').attr("src", src)
     $('#webcam-button').text("Start Again")
 
+
   $('#webcam-button').click ->
     if $(this).text() == "Start Again"
       initializeWebCam()
@@ -27,4 +29,5 @@ $(document).ready ->
       takeSnapshop()
 
   initializeWebCam()
+
 

@@ -1,38 +1,38 @@
 
 #home
-  .container
-    .row
-      .col-xs-12.text-center
-        %h1 Photograph Your Beautiful Face
-        %h3
-          We are developing a connected mirror for a social world.
-          %br
-          Capture meaningful memories effortlessly and with a smile on your face.
-
-        #webcam-outer
-          #webcam
+  #bg-pattern
+  .row.first-row
+    .col-xs-12.text-center
+      %h1 Photograph Your Beautiful Face
+      %h3
+        We are developing a connected mirror for a social world.
         %br
-        %button.btn.btn-primary.btn-lg#webcam-button Remember This Moment!
+        Capture meaningful memories effortlessly and with a smile on your face.
+
+      #webcam-outer
+        #webcam
+      %br
+      %button.btn.btn-primary.btn-lg#webcam-button Remember This Moment!
 
 
 
-    .row
-      .col-xs-12.text-center
-        = link_to "Sign up", new_user_registration_path, class: "btn btn-primary"
-        = link_to "Sign in", new_user_session_path, class: "btn btn-primary"
-        %hr
+  / .row
+  /   .col-xs-12.text-center
+  /     = link_to "Sign up", new_user_registration_path, class: "btn btn-primary"
+  /     = link_to "Sign in", new_user_session_path, class: "btn btn-primary"
+  /     %hr
 
-    .row
-      .col-xs-4.text-center
-        %img.img-polaroid
-        %h2 Hang
-      .col-xs-4.text-center
-        %img.img-polaroid
-        %h2 Smile
-      .col-xs-4.text-center
-        %img.img-polaroid
-        %h2 Share
+  .row.three-steps
+    .col-xs-4.text-center
+      = image_tag("home_hang.png", class: "img-thumbnail")
+      %h2 Hang
+    .col-xs-4.text-center
+      = image_tag("home_smile.jpeg", class: "img-thumbnail")
+      %h2 Smile
+    .col-xs-4.text-center
+      = image_tag("home_share.png", class: "img-thumbnail")
+      %h2 Share
 
-    .row
-      .col-xs-12.text-center
-        %h1 work in progress...
+  .row
+    .col-xs-12.text-center
+      %h1 work in progress...

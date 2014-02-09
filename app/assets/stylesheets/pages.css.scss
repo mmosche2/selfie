@@ -1,5 +1,25 @@
+#bg-pattern {
+  background: url(bg-beams.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity:0.4;
+  filter:alpha(opacity=40);
+  height: 90%;
+  width: 100%;
+  position: absolute;
+}
+
 #home {
-  margin-top: -50px;
+  margin: -50px -15px -80px -15px;
+  background-color: rgb(188, 252, 167);
+  .first-row {
+    padding-bottom: 40px;
+  }
+  .three-steps {
+    padding: 100px 0px;
+  }
 }
 
 h1 {
