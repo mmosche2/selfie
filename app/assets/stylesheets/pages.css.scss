@@ -1,10 +1,24 @@
+#home {
+  margin-top: -50px;
+}
+
 h1 {
   font-size: 50px;
   font-weight: 900;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 h3 {
   margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#webcam {
+  width: 460px;
+  height: 320px;
+}
+
+#webcam-button {
+  font-size: 16px;
   margin-bottom: 30px;
 }

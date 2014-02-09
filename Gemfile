@@ -16,6 +16,8 @@ gem 'jbuilder', '~> 1.2'
 gem "devise", "~> 3.1.0"
 gem "paperclip", "~> 3.0"
 
+gem "swfobject-rails"
+
 group :doc do
   gem 'sdoc', require: false
 end

@@ -9,8 +9,9 @@
     %script{language: "JavaScript", src: "//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"}
     = csrf_meta_tags
   %body
-    %header
-      = render 'layouts/navigation'
+    - if !current_page?(root_url)
+      %header
+        = render 'layouts/navigation'
     %main{:role => "main"}
       = render 'layouts/messages'
       = yield
