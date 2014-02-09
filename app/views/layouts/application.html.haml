@@ -6,6 +6,7 @@
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Selfie'}"}
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
+    %script{language: "JavaScript", src: "//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"}
     = csrf_meta_tags
   %body
     %header

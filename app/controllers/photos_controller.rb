@@ -10,6 +10,8 @@ class PhotosController < ApplicationController
     @photo.save if @photo.valid?
   end
 
+# http://stackoverflow.com/questions/10160286/uploading-a-file-to-rails-json-api-server-with-paperclip-and-multipart-request
+# https://github.com/thoughtbot/paperclip/
 
   # private
 
