@@ -1,9 +1,14 @@
 Selfie::Application.routes.draw do
 
   devise_for :users
-  resource :photos
 
-  root :to => "photos#index"
+  resources :users do
+    resources :photos
+  end
+
+
+
+  root :to => "pages#index"
 
 
 end
