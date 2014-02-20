@@ -10,12 +10,7 @@ class PhotosController < ApplicationController
     @photo.image = params[:image] if params[:image].present?
     @photo.save if @photo.valid?
     p "photo: #{@photo.inspect}"
-    respond_to do |format|
-      p "format: #{format}"
-      format.html { redirect_to(@photo) }
-      format.json  { render :json => @photo, :status => :created }
-    end
-
+    respond_with @photo, :location => user_photos_path(current_user.id)
   end
 
 # http://stackoverflow.com/questions/10160286/uploading-a-file-to-rails-json-api-server-with-paperclip-and-multipart-request
