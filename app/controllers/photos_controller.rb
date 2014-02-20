@@ -9,8 +9,10 @@ class PhotosController < ApplicationController
     @photo = Photo.create(user_params)
     @photo.image = params[:image] if params[:image].present?
     @photo.save if @photo.valid?
+    p "photo: #{@photo.inspect}"
     respond_to do |format|
-      format.html { redirect_to(@person) }
+      p "format: #{format}"
+      format.html { redirect_to(@photo) }
       format.json  { render :json => @photo, :status => :created }
     end
 
