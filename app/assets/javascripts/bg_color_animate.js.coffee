@@ -6,9 +6,9 @@ $(document).ready ->
   console.log "mid pos: ", animation_middle_pos
   animation_end_pos = $(document).height()
   console.log "end pos: ", animation_end_pos
-  beginning_color = new $.Color("rgb(188, 252, 167)")
+  beginning_color = new $.Color("rgb(255, 255, 205)")
   middle_color = new $.Color("rgb(248,199,150)")
-  ending_color = new $.Color("rgb(111,142,224)")
+  ending_color = new $.Color("rgb(171,202,255)")
   $(document).scroll ->
     scroll_pos = $(this).scrollTop()
 

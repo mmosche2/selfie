@@ -13,7 +13,7 @@
 
 #home {
   margin: -50px -15px -80px -15px;
-  background-color: rgb(188, 252, 167);
+  background-color: rgb(255, 255, 205);
   .first-row {
     padding-bottom: 40px;
   }
@@ -40,5 +40,12 @@ h3 {
 
 #webcam-button {
   font-size: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+.home-link-box {
+  margin-left: -5px;
+}
+.home-link {
+  padding: 0px 10px;
+  font-size: 18px;
 }

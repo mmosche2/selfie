@@ -13,13 +13,17 @@
         #webcam
       %br
       %button.btn.btn-primary.btn-lg#webcam-button Remember This Moment!
+      %br
+      .home-link-box
+        = link_to "Sign up", new_user_registration_path, class: "home-link"
+        |
+        = link_to "Sign in", new_user_session_path, class: "home-link"
 
 
 
   / .row
   /   .col-xs-12.text-center
-  /     = link_to "Sign up", new_user_registration_path, class: "btn btn-primary"
-  /     = link_to "Sign in", new_user_session_path, class: "btn btn-primary"
+  /
   /     %hr
 
   .row.three-steps
