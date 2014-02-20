@@ -2,3 +2,11 @@
   .row
     .col-xs-12.text-center
       %h1 My Photos
+
+  .row
+    .col-xs-12.text-center
+      - if current_user.photos.count == 0
+        %p no photos
+      - else
+        - current_user.photos.each do |photo|
+          = photo.image_file_name
